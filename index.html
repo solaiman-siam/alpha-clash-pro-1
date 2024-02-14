@@ -32,10 +32,10 @@
                             while playing...</p>
                     </div>
                     <div class="">
-                        <h1 id="alphabetId" class="font-bold text-6xl text-[#010313]">Y</h1>
+                        <h1 id="currentAlphabet" class="font-bold text-6xl text-[#010313]">Y</h1>
                     </div>
                 </div>
-                <div id="keyboard">
+                <div>
                     <div class="flex justify-center gap-1 my-1 w-full">
                         <kbd id="q" class="kbd">q</kbd>
                         <kbd id="w" class="kbd">w</kbd>
@@ -75,13 +75,13 @@
                         class="flex gap-2 text-xs bg-[#894189] px-7 py-1.5 justify-center items-center text-white rounded-full">
                         <p>Life</p>
                         <img class="w-5" src="images/life.svg" alt="">
-                        <p>0</p>
+                        <p id="currentLife">5</p>
                     </div>
                     <div
                         class="flex gap-2 text-xs justify-center items-center bg-[#360490]  px-6 py-2.5 text-white rounded-full">
                         <p>Score</p>
                         <img class="w-[18px]" src="images/monetization.svg" alt="">
-                        <p class="score">0</p>
+                        <p id="currentScore">0</p>
                     </div>
 
                 </div>
@@ -90,10 +90,12 @@
 
         <!-- Score Board -->
 
-        <section class="flex justify-center items-center min-h-screen hidden">
+        <section id="gameOver" class="flex flex-col justify-center items-center min-h-screen hidden">
+            <h1 class="text-2xl font-semibold text-white">Game Over!!</h1>
             <div class="w-52 h-36 bg-[#ffffff57] rounded-lg flex flex-col items-center justify-center">
-                <h2 class="font-extrabold text-3xl text-white pb-2">Score : <span class="font-semibold">14</span></h2>
-                <button class="w-fit btn-sm  bg-white  font-bold  rounded-lg mb-2 text-xs">Play
+                <h2 class="font-extrabold text-3xl text-white pb-2">Score : <span class="font-semibold"
+                        id="gameOverScore">14</span></h2>
+                <button onclick="playAgain2()" class="w-fit btn-sm  bg-white  font-bold  rounded-lg mb-2 text-xs">Play
                     Again</button>
                 <p class="text-white text-xs font-semibold">Practice will make you Pro</p>
             </div>

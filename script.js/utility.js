@@ -8,17 +8,22 @@ function showElement(elemId) {
   element.classList.remove("hidden");
 }
 
-function findAlphabet() {
-  let string = "abcdefghijklmnopqrstuvwxyz";
-  let stringArray = string.split("");
-  let num = Math.floor(Math.random() * 25);
-  let randomAlphabet = stringArray[num];
+function createRandomAlphabet() {
+  let str = "abcdefghijklmnopqrstuvwxyz";
+  let strArray = str.split("");
+  let randomNumber = Math.floor(Math.random() * 26);
+  let randomAlphabet = strArray[randomNumber];
   return randomAlphabet;
 }
 
-
-function setBackgroundColor(elementId) {
-    let element = document.getElementById(`${elementId}`);
-    element.classList.add('bg-orange-400')
-    console.log(element)
+function setBackgroundColor(backgroundId) {
+  let element = document.getElementById(backgroundId);
+  element.classList.add("bg-orange-400");
 }
+
+function removeBackgroundColor(backgroundId){
+  let element = document.getElementById(backgroundId);
+  element.classList.remove('bg-orange-400')
+}
+
+
